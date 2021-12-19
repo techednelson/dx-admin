@@ -1,16 +1,9 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-    jest: true,
-    commonjs: true,
-  },
-  extends: ['airbnb'],
-  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
   rules: {
-    'no-unused-vars': 'error',
-    'no-var-requires': 'off',
-    'no-var': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 };
